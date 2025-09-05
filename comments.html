@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments - Soorya Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-logo">CodeSphere</div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="project.html">Projects</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="comments.html" class="active">Comments</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Comments Section -->
+    <section class="youtube-comments">
+        <div class="container">
+            <div class="comments-header">
+                <h3><span id="commentCount">3</span> Comments</h3>
+            </div>
+
+            <!-- Add Comment -->
+            <div class="add-comment">
+                <div class="user-avatar">S</div>
+                <div class="comment-input-area">
+                    <form id="commentForm">
+                        <input type="text" id="commentInput" placeholder="Add a comment...">
+                        <div class="comment-actions">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="comment-btn">Comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Comments List -->
+            <div id="commentsList" class="comments-list">
+                <div class="comment-item">
+                    <div class="comment-avatar">J</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="username">@johndoe</span>
+                            <span class="timestamp">2 days ago</span>
+                        </div>
+                        <div class="comment-text">Amazing portfolio! Your cloud architecture skills are really impressive. Keep up the great work!</div>
+                        <div class="comment-actions">
+                            <button class="action-btn"><i class="fas fa-thumbs-up"></i> 12</button>
+                            <button class="action-btn"><i class="fas fa-thumbs-down"></i></button>
+                            <button class="action-btn">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar">M</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="username">@mikejohnson</span>
+                            <span class="timestamp">1 day ago</span>
+                        </div>
+                        <div class="comment-text">Love the design and the tech stack you're using. Would love to collaborate on a project!</div>
+                        <div class="comment-actions">
+                            <button class="action-btn"><i class="fas fa-thumbs-up"></i> 8</button>
+                            <button class="action-btn"><i class="fas fa-thumbs-down"></i></button>
+                            <button class="action-btn">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment-item">
+                    <div class="comment-avatar">A</div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="username">@alexsmith</span>
+                            <span class="timestamp">5 hours ago</span>
+                        </div>
+                        <div class="comment-text">Great work on the cybersecurity section. Very detailed and well presented!</div>
+                        <div class="comment-actions">
+                            <button class="action-btn"><i class="fas fa-thumbs-up"></i> 3</button>
+                            <button class="action-btn"><i class="fas fa-thumbs-down"></i></button>
+                            <button class="action-btn">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        let commentCount = 3;
+        
+        // Hamburger menu toggle
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = document.getElementById('commentInput');
+            const text = input.value.trim();
+            
+            if (text) {
+                addComment(text);
+                input.value = '';
+                commentCount++;
+                document.getElementById('commentCount').textContent = commentCount;
+            }
+        });
+
+        function addComment(text) {
+            const commentsList = document.getElementById('commentsList');
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-item';
+            
+            const firstLetter = 'Y'; // You
+            
+            newComment.innerHTML = `
+                <div class="comment-avatar">${firstLetter}</div>
+                <div class="comment-content">
+                    <div class="comment-header">
+                        <span class="username">@you</span>
+                        <span class="timestamp">now</span>
+                    </div>
+                    <div class="comment-text">${text}</div>
+                    <div class="comment-actions">
+                        <button class="action-btn"><i class="fas fa-thumbs-up"></i> 0</button>
+                        <button class="action-btn"><i class="fas fa-thumbs-down"></i></button>
+                        <button class="action-btn">Reply</button>
+                    </div>
+                </div>
+            `;
+            
+            commentsList.insertBefore(newComment, commentsList.firstChild);
+        }
+    </script>
+</body>
+</html>

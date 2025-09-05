@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - IT Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="hamburger-menu" id="hamburgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-logo">CodeSphere</div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="project.html">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="comments.html">Comments</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Hi, I'm <span class="gradient-text">Soorya</span></h1>
+                <p class="hero-subtitle">IT Specialist | Developer | Tech Innovator</p>
+                <div class="typing-container">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                   <a href="https://www.youtube.com/"><img src="image.jpg" alt="Alex Chen" class="profile-img"></a> 
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Architecture</h3>
+                    <div class="skill-progress">
+                        <div class="progress-ring" data-progress="95">
+                            <svg class="progress-svg">
+                                <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-circle" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <span class="progress-text">95%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <div class="skill-progress">
+                        <div class="progress-ring" data-progress="90">
+                            <svg class="progress-svg">
+                                <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-circle" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <span class="progress-text">90%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <div class="skill-progress">
+                        <div class="progress-ring" data-progress="88">
+                            <svg class="progress-svg">
+                                <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-circle" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <span class="progress-text">88%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Infrastructure</h3>
+                    <div class="skill-progress">
+                        <div class="progress-ring" data-progress="92">
+                            <svg class="progress-svg">
+                                <circle class="progress-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-circle" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <span class="progress-text">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="portfolio-grid">
+                <div class="coming-soon">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Coming Soon</h3>
+                    <p>Exciting projects are in development. Stay tuned!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hi, I'm Soorya an IT guy with a passion for technology, innovation, and problem-solving. I enjoy working across different areas of IT, from coding and system management to exploring the latest tools and frameworks that shape the digital world..</p>
+                    <p>With a keen eye for detail and a curiosity for learning, I focus on creating smart, efficient, and creative solutions that not only solve technical problems but also make a real impact. Whether it's building projects, experimenting with new technologies, or sharing knowledge, I believe in continuous growth and staying ahead in the ever-evolving tech landscape.</p>
+                    <p>When I'm not working on IT projects, you'll usually find me exploring new ideas, connecting with like-minded people, or diving deeper into the world of innovation. My goal is simple: to keep learning, keep creating, and contribute to the future of technology.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1.5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                <div class="container">
+  <h1></h1>
+  <a <div href="Sooryan_Sreelal_CV.pdf" download="Sooryan_Sreelal_CV.pdf" class="button button-1" >CV/RESUME</a> 
+
+</div>
+                </div>
+                <div class="about-visual">
+                    <div class="tech-orbit">
+                        <div class="orbit-center"></div>
+                        <div class="orbit-ring ring-1"></div>
+                        <div class="orbit-ring ring-2"></div>
+                        <div class="orbit-ring ring-3"></div>
+                        <div class="orbit-item item-1"><i class="fab fa-aws"></i></div>
+                        <div class="orbit-item item-2"><i class="fab fa-docker"></i></div>
+                        <div class="orbit-item item-3"><i class="fab fa-python"></i></div>
+                        <div class="orbit-item item-4"><i class="fas fa-shield-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+<!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to collaborate?</h3>
+                    <p>I'm always interested in discussing new opportunities, innovative projects, or just connecting with fellow tech enthusiasts.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sooryansreelal@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8521558941</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>india,kerala</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Icons -->
+    <div class="social-media">
+        <a href="https://www.linkedin.com/jobs/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/redoxmen" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
